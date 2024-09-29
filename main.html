@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Hobbies</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #ffffff;
+			background-image: url('bg.jpg'); /* Ensure correct path */
+			background-size: cover;
+			background-repeat: no-repeat;
+			padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        .main-container {
+            background-color: #f2808a; /* This is bg-gray-800 */
+            height: 20rem;
+            width: 60rem;
+            padding-top: 3rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            border-radius: 0.375rem; /* This is rounded-md (6px) */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+
+        .description {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #d95f76;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #f2a7a7;
+        }
+
+        .hobbies {
+            margin-top: 20px;
+            font-size: 1.2em;
+            display: none; /* Initially hidden */
+        }
+    </style>
+</head>
+<body>
+<main class="main-container">
+    <h1>Click a member to view their hobbies:</h1>
+    <div class="description">
+        Click a member to view their hobbies:
+    </div>
+
+    <div class="button-container">
+        <button onclick="showHobbies('Syk')">Syk</button>
+        <button onclick="showHobbies('Zach')">Zach</button>
+        <button onclick="showHobbies('Lewis')">Lewis</button>
+        <button onclick="showHobbies('Joseph')">Joseph</button>
+        <button onclick="showHobbies('Luis')">Luis</button>
+    </div>
+
+    <div class="hobbies" id="hobbies"></div>
+</main>
+    <script>
+        function showHobbies(member) {
+            const hobbiesDisplay = document.getElementById('hobbies');
+            let hobbies;
+
+            // Define hobbies for each member
+            switch (member) {
+                case 'Syk':
+                    window.location.href = "Syk part/Syk project.html"; // Change to your destination file
+                    break;
+                case 'Zach':
+                    window.location.href = "ZACH_PART/cin.html"; // Change to your destination file
+                    break;
+                case 'Lewis':
+                    window.location.href = 'Lewis part/tierra.html';
+                    break;
+                case 'Joseph':
+                    window.location.href = 'Joseph Part/Joseph.html';
+                    break;
+                case 'Luis':
+                    window.location.href = "Luis part/luispart.html";
+                    break;
+                default:
+                    hobbies = '';
+            }
+
+            // Update the hobbies display
+            hobbiesDisplay.textContent = hobbies;
+            hobbiesDisplay.style.display = 'block'; // Show the hobbies
+        }
+    </script>
+
+</body>
+</html>
