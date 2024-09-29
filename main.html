@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Hobbies</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+			background-image: url('bg.jpg'); /* Ensure correct path */
+			background-size: cover;
+			background-repeat: no-repeat;
+			padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .description {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .hobbies {
+            margin-top: 20px;
+            font-size: 1.2em;
+            display: none; /* Initially hidden */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="description">
+        Click a member to view their hobbies:
+    </div>
+
+    <div class="button-container">
+        <button onclick="showHobbies('Alice')">Syk</button>
+        <button onclick="showHobbies('Bob')">Zach</button>
+        <button onclick="showHobbies('Charlie')">Charlie</button>
+        <button onclick="showHobbies('Diana')">Diana</button>
+        <button onclick="showHobbies('Ethan')">Ethan</button>
+    </div>
+
+    <div class="hobbies" id="hobbies"></div>
+
+    <script>
+        function showHobbies(member) {
+            const hobbiesDisplay = document.getElementById('hobbies');
+            let hobbies;
+
+            // Define hobbies for each member
+            switch (member) {
+                case 'Alice':
+                    window.location.href = "Syk part/Syk project.html"; // Change to your destination file
+                    break;
+                case 'Bob':
+                    window.location.href = "zach part/cin.html"; // Change to your destination file
+                    break;
+                case 'Charlie':
+                    hobbies = 'Hobbies: Traveling, Music, Writing.';
+                    break;
+                case 'Diana':
+                    hobbies = 'Hobbies: Dancing, Yoga, Volunteering.';
+                    break;
+                case 'Ethan':
+                    hobbies = 'Hobbies: Running, Coding, Gardening.';
+                    break;
+                default:
+                    hobbies = '';
+            }
+
+            // Update the hobbies display
+            hobbiesDisplay.textContent = hobbies;
+            hobbiesDisplay.style.display = 'block'; // Show the hobbies
+        }
+    </script>
+
+</body>
+</html>
