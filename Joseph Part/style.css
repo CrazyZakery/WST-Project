@@ -41,6 +41,12 @@
         a:hover {
             text-decoration: underline;
         }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
         button {
             padding: 10px 20px;
             font-size: 1em;
