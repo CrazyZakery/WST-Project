@@ -1,0 +1,68 @@
+body {
+    background-color: #f4f4f9;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-image: url('cinnamoroll.jpg'); /* Ensure correct path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 50px; /* Prevent footer overlap */
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #e0e0e0; /* Better contrast */
+    padding-top: 20px;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 1.2em;
+}
+
+th {
+    background-color: silver;
+    color: white;
+}
+
+tr:hover {
+    background-color: #ccc; /* A shade darker for hover */
+}
+
+a {
+    color: #c0c0c0; /* Ensure readability */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f0f0f0; /* Lighten text on hover */
+    text-decoration: underline;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Ensure elements use box-sizing to prevent unexpected sizing */
+* {
+    box-sizing: border-box;
+}
